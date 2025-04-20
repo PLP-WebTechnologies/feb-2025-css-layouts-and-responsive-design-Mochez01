@@ -1,0 +1,74 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar ul li {
+    margin: 0 15px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Main Content */
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns by default */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Sections */
+  .section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .section h2 {
+    margin-bottom: 10px;
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* Tablet: 768px and up */
+  @media (max-width: 768px) {
+    .content {
+      grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+    }
+  }
+  
+  /* Mobile: 480px and up */
+  @media (max-width: 480px) {
+    .navbar ul {
+      flex-direction: column; /* Stack navbar items on small screens */
+    }
+  
+    .content {
+      grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+  }
